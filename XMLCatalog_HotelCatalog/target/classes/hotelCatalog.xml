@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="hotelCatalog.xsl"?>
+<!DOCTYPE hotelCatalog SYSTEM "hotelCatalog.dtd" [
+    <!NOTATION PNG SYSTEM "image/png">
+    <!NOTATION JPG SYSTEM "image/jpeg">
+	<!ENTITY festa_sofia_hotel SYSTEM "images/Festa_sofia_hotel.jpg" NDATA JPG>
+	<!ENTITY festa_sofia_room SYSTEM "images/Festa_sofia_room.jpg" NDATA JPG>
+	<!ENTITY festa_borovets_hotel SYSTEM "images/Festa_borovets_hotel.jpg" NDATA JPG>
+	<!ENTITY festa_borovets_room SYSTEM "images/Festa_borovets_room.jpg" NDATA JPG>
+	<!ENTITY royal_castle_hotel SYSTEM "images/Royal_castle_hotel.jpg" NDATA JPG>
+	<!ENTITY royal_castle_room SYSTEM "images/Royal_castle_room.jpg" NDATA JPG>
+	<!ENTITY marinela_hotel SYSTEM "images/Marinela-hotel.jpg" NDATA JPG>
+	<!ENTITY marinela_room SYSTEM "images/Marinela-room.jpg"  NDATA JPG>
+	<!ENTITY chaika_hotel SYSTEM "images/Chaika_hotel.png"  NDATA PNG>
+	<!ENTITY chaika_room SYSTEM "images/Chaika_room.jpg" NDATA JPG>
+	<!ENTITY rila_borovets_hotel SYSTEM "images/Rila_borovets_hotel.jpg" NDATA JPG>
+	<!ENTITY rila_borovets_room SYSTEM "images/Rila_borovets_room.jpg" NDATA JPG>
+	<!ENTITY perla_beach_hotel SYSTEM "images/Perla_beach_hotel.jpg" NDATA JPG>
+	<!ENTITY perla_beach_room SYSTEM "images/Perla_beach_room.jpg" NDATA JPG>
+]>
+
+<hotelCatalog>
+
+ <hotel hotelChainID="Festa" regionID="SOF" type="Conference" stars="4">
+  <name>Festa Sofia</name>
+  <address>Bulgaria Blvd. 83, 1404 Manastirski Livadi, Sofia</address>
+  <description>
+   Located 200 meters from Mall Bulgaria and the tram stop, Festa Sofia hotel offers elegant rooms with free Wi-Fi and satellite TV.
+   It features a wellness center and beauty salon, as well as 2 restaurants, 3 bars, and 4 conference halls. The spa center includes a sauna and steam bath.
+   Guests can stay fit in the fitness center or enjoy massage and aromatherapy treatments. There is also a hair salon on site. 
+   Restaurant Festa serves local and international cuisine in a secluded atmosphere. The Mezzanine bar offers sophisticated drinks and desserts.
+   The lobby bar serves a variety of coffee specialties. Sahara Hookah Bar offers its guests exquisite varieties of tobacco and a wonderful selection of drinks.
+   All rooms at Festa Sofia hotel have a panoramic view of the city or Vitosha. They are equipped with air conditioning and a safe. 
+   The private bathrooms have a bathtub. The hotel is located in a modern business area, 18 km from Sofia International Airport and 5 km from the city center.
+  </description>
+  <photos>
+   <photo src="festa_sofia_hotel" />
+   <photo src="festa_sofia_room" />
+  </photos>
+  <features>
+   Private Parking, Free WiFi, Airport Shuttle, Fitness Center, Family Rooms, Non-Smoking Rooms, 2 Restaurants,
+   24-Hour Reception, Bar, Good Breakfast
+  </features>
+  <rooms>
+   <room type="single">
+	<price>120</price>
+	<capacity>1</capacity>
+   </room>
+   <room type="double">
+	<price>150</price>
+	<capacity>2</capacity>
+   </room>
+   <room type="suite">
+	<price>200</price>
+	<capacity>3</capacity>
+   </room>
+  </rooms>
+ </hotel>
+
+ <hotel hotelChainID="Festa" regionID="BOR" type="Botique" stars="5">
+  <name>Festa Winter Borovets</name>
+  <address>2010 Borovets, Borovets</address>
+  <description>
+   The luxurious 5-star Festa Winter Palace is located at the foot of Rila in Borovets, just 100 meters from the ski slopes and the gondola lift. 
+   It offers an indoor pool. The large relaxation center with a pool, sauna, steam bath, fitness facilities, and a wide range of massages is a wonderful place 
+   to relax after a day outdoors in the mountains. The spacious rooms and suites feature antique-style furniture, and a balcony overlooking the mountain.
+   The hotel has 2 restaurants and 2 bars serving gourmet cuisine and select drinks. Free WiFi is available throughout Festa Winter Palace.
+  </description>
+  <photos>
+   <photo src="festa_borovets_hotel" />
+   <photo src="festa_borovets_room" />
+  </photos>
+  <features>
+   Indoor Pool, Private Parking, Free WiFi, Family Rooms, Fitness Center, Restaurant, Ski Services, Coffee/Tea Maker in All Rooms,
+   Bar, Good Breakfast
+  </features>
+  <rooms>
+   <room type="single">
+	<price>600</price>
+	<capacity>1</capacity>
+   </room>
+   <room type="double">
+	<price>650</price>
+	<capacity>2</capacity>
+   </room>
+   <room type="suite">
+	<price>1100</price>
+	<capacity>3</capacity>
+   </room>
+  </rooms>
+ </hotel>
+
+ <hotel hotelChainID="Vic" regionID="BRG" type="Resort" stars="5">
+  <name>Royal Castle Design &amp; SPA</name>
+  <address>8259 Elenite, Bulgaria</address>
+  <description>
+   Royal Castle Design &amp; SPA is located in a closed and peaceful complex in the resort village of Elenite. The hotel offers an outdoor seasonal pool with free sun loungers
+   and umbrellas, as well as access to the beach. During the summer season, the hotel hosts various live shows, concerts, and parties with DJs. The hotel offers elegant 
+   designer rooms, all equipped with a flat-screen TV, minibar, and a private balcony. Guests also have access to 4 VIP apartments with boutique designer furnishings, 
+   their own SPA area, and additional amenities for a truly luxurious experience. During the summer season, hotel guests have free access to the "Atlantis" aqua park. 
+   Available for guests are an indoor pool, sauna, SPA center, as well as a fitness room and a squash court.
+  </description>
+  <photos>
+   <photo src="royal_castle_hotel" />
+   <photo src="royal_castle_room" />
+  </photos>
+  <features>
+   Sea View, Outdoor and Indoor Pool, Private Parking, Free WiFi, 24-Hour Reception, Fitness Center, 2 Restaurants,
+   Spa and Wellness, Family Rooms, Bar, Good Breakfast
+  </features>
+   <rooms>
+	<room type="double">
+	 <price>475</price>
+	 <capacity>2</capacity>
+	</room>
+	<room type="suite">
+	 <price>1050</price>
+	 <capacity>4</capacity>
+	</room>
+   </rooms>
+  </hotel>
+
+ <hotel hotelChainID="Vic" regionID="SOF" type="Conference" stars="5">
+  <name>Hotel Marinela Sofia</name>
+  <address>James Bourchier Blvd. 100, Lozenets, 1407 Sofia</address>
+  <description>
+    Hotel Marinela Sofia has an entirely new design and is located 20 minutes by car from Sofia Airport. It offers an indoor pool, 6 restaurants, 4 bars, a fitness club,
+	and a picturesque view of the city and the mountain. The unique Japanese garden is a wonderful place for relaxation or meetings. Guests can dine at the Panorama restaurant 
+	while enjoying the city view and spend a great evening at the Megami club. The hotel has a large ballroom and a conference hall, plus 13 meeting rooms and a remarkable 
+	top-floor hall at Hotel Marinela with a unique view of Sofia. Each room is equipped with air conditioning, heating system, flat-screen TV, free WiFi, and a modern 
+	entertainment system with video and music.
+  </description>
+  <photos>
+   <photo src="marinela_hotel" />
+   <photo src="marinela_room" />
+  </photos>
+  <features>
+   Airport Transfer, Private Parking, Indoor Pool, Free WiFi, Mountain View, 6 Restaurants, Spa and Wellness,
+   Family Rooms, Bar, Good Breakfast
+  </features>
+  <rooms>
+   <room type="single">
+    <price>175</price>
+    <capacity>1</capacity>
+   </room>
+   <room type="double">
+    <price>230</price>
+    <capacity>2</capacity>
+   </room>
+   <room type="suite">
+    <price>2200</price>
+    <capacity>4</capacity>
+   </room>
+  </rooms>
+ </hotel>
+
+ <hotel hotelChainID="Vic" regionID="BRG" type="Resort" stars="3">
+  <name>Chaika Beach Resort</name>
+  <address>Sunny Beach, 8240 Sunny Beach</address>
+  <description>
+   Chaika Beach Resort is located in the northern part of Sunny Beach, right on the beachfront. It is divided into three buildings, some of which offer a panoramic view of the sea.
+   The hotel has direct access to the beach, 2 outdoor pools, and several restaurants and bars. All-inclusive light offers include a main restaurant with a variety of 
+   delicious dishes, a lobby bar, and a pool bar with umbrellas and sun loungers. Guests can enjoy top-notch summer cocktails or beer at the Irish Bar. All rooms are equipped 
+   with air conditioning, a TV, and free WiFi.
+  </description>
+  <photos>
+   <photo src="chaika_hotel" />
+   <photo src="chaika_room" />
+  </photos>
+  <features>
+   Sea View, Private Parking, 2 Pools, Free WiFi, Large Outdoor Garden, Restaurant, Bar, Family Rooms,
+   24-Hour Reception, Good Breakfast
+  </features>
+  <rooms>
+   <room type="double">
+    <price>150</price>
+    <capacity>2</capacity>
+   </room>
+   <room type="suite">
+    <price>200</price>
+    <capacity>4</capacity>
+   </room>
+  </rooms>
+ </hotel>
+
+ <hotel hotelChainID="BT" regionID="BOR" type="Resort" stars="4">
+  <name>Hotel Rila Borovets</name>
+  <address>Borovets, 2010 Borovets</address>
+  <description>
+   Rila Hotel Borovets is located in the heart of the first mountain resort in the Balkans - Borovets, 70 km away from Sofia. Rila Hotel Borovets is situated at the end of
+   the ski slopes, just 200 meters from the gondola lift. It offers a SPA center, various restaurants, and entertainment clubs. Private parking and free WiFi are provided.
+   The conference center offers different options for organizing business and personal events. Guests can take advantage of free access to the SPA center, 
+   which includes a 25-meter swimming pool, 2 hydro-massage tubs, a fitness center, thermal zones, and relaxation areas. The hotel offers relaxation opportunities 
+   through outdoor and indoor sports and entertainment activities. Equipment rental and skiing or snowboarding lessons are also available.
+  </description>
+  <photos>
+   <photo src="rila_borovets_hotel" />
+   <photo src="rila_borovets_room" />
+  </photos>
+  <features>
+   Mountain View, Private Parking, Indoor Pool, Close to Ski Slopes, Airport Transfer, 3 Restaurants, Bar,
+   Family Rooms, Spa and Wellness Center, Fitness Center
+  </features>
+  <rooms>
+   <room type="single">
+    <price>300</price>
+    <capacity>1</capacity>
+   </room>
+   <room type="double">
+    <price>330</price>
+	<capacity>2</capacity>
+   </room>
+   <room type="suite">
+    <price>550</price>
+    <capacity>4</capacity>
+   </room>
+  </rooms>
+ </hotel>
+
+ <hotel hotelChainID="BT" regionID="BRG" type="Resort" stars="4">
+  <name>Perla Beach Club</name>
+  <address>18 Georgi Kondolov St., 8180 Center, Primorsko</address>
+  <description>
+   Perla Beach Hotel overlooks the Black Sea in the town of Primorsko. The hotel is located right next to the beach and offers 3 swimming pools, massage procedures, 
+   and a sauna. All guest rooms feature air conditioning, a private balcony, and cable TV. Some accommodations have sea views. The spacious hotel restaurant is open all day 
+   and offers local and international specialties. Perla Beach Hotel also has a lobby bar, a poolside bar, and barbecue facilities. Guests can take advantage of various sports 
+   facilities, including a tennis court, volleyball court, and fitness center.
+  </description>
+  <photos>
+   <photo src="perla_beach_hotel" />
+   <photo src="perla_beach_room" />
+  </photos>
+  <features>
+   Sea View, Outdoor Pool, Airport Transfer, Free WiFi, Restaurant, Family Rooms, Non-Smoking Rooms, Bar,
+   Good Breakfast
+  </features>
+  <rooms>
+   <room type="double">
+    <price>170</price>
+    <capacity>2</capacity>
+   </room>
+   <room type="suite">
+    <price>185</price>
+    <capacity>3</capacity>
+   </room>
+  </rooms>
+ </hotel>
+	
+ <hotelChain hotelChainID="Vic">
+  <name>Victoria Group Hotels and Resorts</name>
+  <description>
+   Their portfolio consists of 11 hotels categorized as 3, 4, and 5 stars, over 500 holiday villas, and multifunctional halls located in various destinations. 
+   Their hotels impress with unconventional and unique designs. Their advantage lies in their locations—by the sea, in the center of Sofia, or near some of the best ski slopes!
+   Their vacation hotels offer All-Inclusive accommodation with included meals, drinks, and services, ensuring a worry-free vacation! The Victoria Group Hotels and Resorts 
+   portfolio includes some of the most elegant and luxurious wedding venues in Bulgaria — from the heavenly beaches of Elenite to the city lights of Sofia.
+  </description>
+  <numberOfHotels>10</numberOfHotels>
+ </hotelChain>
+
+ <hotelChain hotelChainID="BT">
+  <name>BT Collection</name>
+  <description>
+   BT Collection is a collection of luxury hotels and complexes situated in some of the most beautiful places in Bulgaria—Black Sea Coast, Borovets, and Arbanasi.
+   The hotels combine an elegant ambiance, modern design, luxury, and high-quality service, symbolizing tourism in Bulgaria. The BT Collection offers SPA facilities,
+   relaxation, delicious food, and entertainment, suitable for family vacations as well as business trips and conferences.
+  </description>
+  <numberOfHotels>7</numberOfHotels>
+ </hotelChain>
+
+ <hotelChain hotelChainID="Festa">
+  <name>Festa Hotels</name>
+  <description>
+   Festa Hotels is a hotel chain established in 2003, known for its consistently high service quality and personalized approach to every guest. Thanks to their attractive locations,
+   the chain's hotels offer various options for summer seaside relaxation, winter ski holidays, business travel, and a wide range of rejuvenating SPA and balneotherapy procedures.
+   For sea vacation enthusiasts, Festa's collection includes three hotels in two of the most popular destinations on the Bulgarian Black Sea—Nessebar and Pomorie.
+   Guests can also enjoy mountain ski vacations at their hotels in Borovets, as well as urban business trips with the offerings of Festa Sofia Hotel, located in a tranquil spot
+   in the capital.
+  </description>
+  <numberOfHotels>7</numberOfHotels>
+ </hotelChain>
+
+ <region regionID="SOF">
+  <name>Sofia</name>
+  <description>
+   Sofia is the capital and the largest city in Bulgaria. The population is around 1.3 million people. Sofia is located in the central part of Western Bulgaria. 
+   It serves as the main administrative, industrial, transportation, cultural, and educational center of the country. The transportation system in the capital is highly developed.
+   In Sofia, you can find:
+   - Numerous educational institutions, including the oldest and largest higher education institution in Bulgaria - Sofia University "St. Kliment Ohridski," 
+     as well as the Bulgarian Academy of Sciences and the National Library "Sts. Cyril and Methodius."
+   - Temples of major world religions, with around 200 functioning Orthodox churches and chapels and over 40 monasteries, one of which is the memorial temple "Alexander Nevsky."
+   - Theatres and opera houses, including the Ivan Vazov National Theatre and the Sofia Opera and Ballet.
+   - Museums and galleries such as the National Historical Museum, the National Ethnographic Museum, and the National Art Gallery.
+   - Monuments from various historical periods.
+   - Concert halls, the largest of which is Arena Sofia with up to 15,000 seats.
+   - Vasil Levski Stadium, the largest stadium in the country with a capacity of 44,000 people.
+   - Other notable places include the National Palace of Culture, the two oldest and well-known bridges in Sofia - the Eagle Bridge and the Lion Bridge, 
+   the largest park in Sofia - Borisova Gradina, and the Sofia Zoo.
+  </description>
+  <sights>
+   Sofia University "St. Kliment Ohridski", Bulgarian Academy of Sciences, National Library "Sts. Cyril and Methodius",
+   memorial temple "Alexander Nevsky", National Theatre "Ivan Vazov", Sofia Opera and Ballet, National Historical Museum,
+   National Ethnographic Museum, National Art Gallery, Arena Sofia, Vasil Levski Stadium, National Palace of Culture,
+   Eagle Bridge, Lion Bridge, Borisova Gradina, Sofia Zoo
+  </sights>
+  <transports>
+   <transport type="trainStation">
+    <name>Central Railway Station Sofia</name>
+    <link>https://www.centralnaavtogara.bg</link>
+   </transport>
+   <transport type="busStation">
+    <name>Central Bus Station Sofia</name>
+    <link>https://www.centralnaavtogara.bg</link>
+   </transport>
+   <transport type="airport">
+    <name>Sofia Airport</name>
+    <link>https://www.sofiaairport.bg</link>
+   </transport>
+   <transport type="publicTransport">
+    <name>Urban Mobility Center</name>
+    <link>https://www.sofiatraffic.bg</link>
+   </transport>
+  </transports>
+ </region>
+
+ <region regionID="BRG">
+  <name>Burgas</name>  
+  <description>
+   Burgas is the largest city in Southeastern Bulgaria and the second largest on the Bulgarian Black Sea coast. The population is around 210,000 residents.
+   Burgas is the most important cultural, economic, transportation, administrative, tourist, and educational center in Southeastern Bulgaria and is considered 
+   the most romantic city in Bulgaria with its small streets in the center, old houses, and the Sea Garden. Over 40% of mass tourism in the country takes place 
+   in the Burgas region. Festivals, concerts, and exhibitions form a rich program of cultural events that embody the unique spirit of Burgas.
+   In Burgas, you can find:
+   - Museums, theaters, and operas, such as the Ethnographic Museum and the Burgas Opera.
+   - Temples and monasteries, including the cathedral temple "Sts. Cyril and Methodius."
+   - Concert halls, the largest being Arena Burgas with up to 15,000 seats.
+   - "St. Anastasia" island.
+   - The Sea Garden with the Sea Casino and the Burgas Bridge.
+   Near Burgas, you can find:
+   - The Strandzha Mountain region.
+   - The ancient Thracian sanctuary Beglik Tash.
+   - Numerous resort towns, some of which are Nesebar, the only Bulgarian city - part of UNESCO, the medieval town of Apollonia (today Sozopol), Sunny Beach, Pomorie, and Primorsko.
+   - Campsites, including "Gradina," "Zlatna Ribka," "Smokinya," and "Kavatsite."
+  </description>
+  <sights>
+   Ethnographic Museum, Burgas Opera, cathedral temple "Sts. Cyril and Methodius", Arena Burgas, "St. Anastasia" island,
+   Sea Garden, Strandzha Mountain, Beglik Tash, resort town Nesebar, resort town Sozopol, resort town Sunny Beach,
+   resort town Pomorie, resort town Primorsko, campsite "Gradina", campsite "Zlatna Ribka", campsite "Smokinya",
+   campsite "Kavatsite"
+  </sights>
+  <transports>
+   <transport type="trainStation">
+    <name>South Bus Station</name>
+    <link>https://www.bdz.bg</link>
+   </transport>
+   <transport type="busStation">
+    <name>South Bus Station</name>
+    <link>https://burgasbus.info</link>
+   </transport>
+   <transport type="airport">
+    <name>Burgas Airport</name>
+    <link>https://burgas-airport.bg</link>
+   </transport>
+   <transport type="publicTransport">
+    <name>BurgasBus</name>
+	<link>https://burgasbus.info</link>
+   </transport>
+  </transports>
+ </region>
+
+ <region regionID="BOR">
+  <name>Borovets</name>  
+  <description>
+   Borovets (formerly known as Chamkoria until 1942) is the first resort in Bulgaria and the primary tourist center in the Samokov municipality with international significance,
+   offering opportunities for practicing all kinds of winter sports. Borovets is the closest winter resort to Sofia and is located in the Rila Mountain. The resort has 26 hotels
+   with accommodation for 98,000 guests, along with an excellent network of ski slopes and lifts, diverse restaurants, and bars. Borovets hosts various ski competitions and 
+   also offers opportunities for mountain biking, rock climbing, and mountaineering.
+   Near Borovets, you can find:
+   - The highest peak not only in Bulgaria but also in the entire Balkan Peninsula - Mount Musala in the Rila Mountain, standing at 2,925 meters.
+   - Rila Monastery - one of the most significant cultural monuments in Bulgaria, included in UNESCO's World Heritage List.
+   - The summer royal residence Tsarska Bistritsa.
+   - Tsari Mali Grad - an archaeological site located in the village of Belchin.
+   - The Seven Rila Lakes - one of the largest natural landmarks not only in Bulgaria but also in the Balkan Peninsula.
+   - The eco-trail Beli Iskar.
+   - Lift stations: Yastrebets, Martinovi Baraki Express, Sitnyakovo, Yastrebets Express, Markudjik 2.
+   - Ski lifts: Sitnyakovo, Rila, Iglika, Rotata, Markudjik 0, Markudjik 1, Markudjik 3.
+  </description>
+  <sights>
+   Mount Musala, Rila Monastery, Tsarska Bistritsa, Tsari Mali Grad, Seven Rila Lakes, eco-trail Beli Iskar,
+   lift station Yastrebets, lift station Martinovi Baraki Express, lift station Sitnyakovo, lift station Yastrebets Express,
+   lift station Markudjik 2, ski lift Sitnyakovo, ski lift Rila, ski lift Iglika, ski lift Rotata, ski lift Markudjik 0,
+   ski lift Markudjik 1, ski lift Markudjik 3
+  </sights>
+  <transports>
+   <transport type="busStation">
+    <name>Samokov Bus Station</name>
+    <link>http://avtogara-samokov.eu</link>
+   </transport>
+  </transports>
+ </region>
+</hotelCatalog>

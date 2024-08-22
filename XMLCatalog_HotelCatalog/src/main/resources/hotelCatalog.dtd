@@ -1,0 +1,35 @@
+<!ELEMENT hotelCatalog (hotel+, hotelChain+, region+)>
+
+<!ELEMENT hotel (name, address, description, photos, features, rooms)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT features (#PCDATA)>
+<!ATTLIST hotel hotelChainID IDREF #REQUIRED>
+<!ATTLIST hotel regionID IDREF #REQUIRED>
+<!ATTLIST hotel type (Conference|Resort|Botique) #REQUIRED>
+<!ATTLIST hotel stars (1|2|3|4|5) #REQUIRED>
+
+<!ELEMENT photos (photo*)>
+<!ELEMENT photo EMPTY>
+<!ATTLIST photo src ENTITY #REQUIRED>
+
+<!ELEMENT rooms (room+)>
+<!ELEMENT room (price, capacity)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT capacity (#PCDATA)>
+<!ATTLIST room type (single|double|suite) #REQUIRED>
+
+<!ELEMENT hotelChain (name, description, numberOfHotels)>
+<!ELEMENT numberOfHotels (#PCDATA)>
+<!ATTLIST hotelChain hotelChainID ID #REQUIRED>
+
+<!ELEMENT region (name, description, sights?, transports?)>
+<!ATTLIST region regionID ID #REQUIRED>
+
+<!ELEMENT sights (#PCDATA)>
+
+<!ELEMENT transports (transport+)>
+<!ELEMENT transport (name, link)>
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST transport type (busStation|trainStation|airport|publicTransport) #REQUIRED>

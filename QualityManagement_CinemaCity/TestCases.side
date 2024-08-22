@@ -1,0 +1,2768 @@
+{
+  "id": "cf6b6179-08f8-4efd-a86f-ab415d632ef7",
+  "version": "2.0",
+  "name": "CinemaCity test cases",
+  "url": "https://www.cinemacity.bg",
+  "tests": [{
+    "id": "cb2bff67-e234-48f7-825e-5d03933a80a6",
+    "name": "SearchMovieSuccessfully",
+    "commands": [{
+      "id": "441a9733-49bc-473b-8a74-77d233783262",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be50371a-7d5d-44a6-8a28-1f889f7d55e5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1097x888",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14e1d6fb-221d-4f90-8fb8-787ec45b1a04",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf6244c0-eae6-464e-9299-8d20639d5e27",
+      "comment": "",
+      "command": "store",
+      "target": "АКВАМЕН И ИЗГУБЕНОТО КРАЛСТВО",
+      "targets": [],
+      "value": "MovieTitle"
+    }, {
+      "id": "c62ab165-b6c6-4805-a5e5-0dd82dff2934",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": "${MovieTitle}"
+    }, {
+      "id": "fcce828b-b059-47e2-aa55-5846e088c584",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "7a461f84-d1b6-4a1d-8791-3de2a231417e",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-xs-8 > h2",
+      "targets": [
+        ["css=.col-xs-8 > h2", "css:finder"],
+        ["xpath=//div[@id='filmsResults']/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/h2", "xpath:position"]
+      ],
+      "value": "title"
+    }, {
+      "id": "0faf7e32-49c5-4644-b642-6fc60d33ba8a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col-xs-8 > h2",
+      "targets": [],
+      "value": "${MovieTitle}"
+    }]
+  }, {
+    "id": "65fc7292-9412-4ec9-a225-a79230e0ab8b",
+    "name": "SearchMovieInvalidOutput",
+    "commands": [{
+      "id": "a33605b4-3fa7-434f-b77c-9a69aa4d5a6a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe220c5a-438f-44c6-8a22-144d951c15be",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1097x888",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f062f453-f42a-47fe-963a-26cfd383e5da",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c590d2a-b96d-4070-bd96-74d3906fb12c",
+      "comment": "",
+      "command": "store",
+      "target": "FERRARI",
+      "targets": [],
+      "value": "MovieTitle"
+    }, {
+      "id": "9c581190-d926-453a-9d31-9d32708c61af",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": "${MovieTitle}"
+    }, {
+      "id": "06df32fd-ff14-4ac4-9c2d-724adf7ca5c9",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "d958c3a4-07c5-4e1e-a691-714e98ceef43",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-xs-8 > h2",
+      "targets": [
+        ["css=.col-xs-8 > h2", "css:finder"],
+        ["xpath=//div[@id='filmsResults']/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/h2", "xpath:position"]
+      ],
+      "value": "title"
+    }, {
+      "id": "7b25b11a-021f-42ad-86ec-717d3d97a9a9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col-xs-8 > h2",
+      "targets": [],
+      "value": "${MovieTitle}"
+    }]
+  }, {
+    "id": "146bb52c-648b-4642-bc5a-49b8d5656dca",
+    "name": "SearchMovieNonexistent",
+    "commands": [{
+      "id": "70728f3c-19e1-4cc7-adb0-18dbc910a710",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34627b90-7e12-45da-9bbd-dd99317d1f95",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1097x888",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6b77c40-8974-4b26-9b0c-b253d4a77dbb",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da2c00d6-7fed-472a-9ed0-9bf29c3cd6af",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "ee756558-d652-49bb-9ceb-1c19f0576573",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "db87b4b9-80d8-44a8-9d7d-bd04a40a96a6",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=#noResults h2",
+      "targets": [
+        ["css=#noResults h2", "css:finder"],
+        ["xpath=//div[@id='noResults']/div/h2", "xpath:idRelative"],
+        ["xpath=//section[3]/div/div[2]/div/h2", "xpath:position"]
+      ],
+      "value": "title"
+    }, {
+      "id": "f9ba2243-2edb-48cb-8715-562b20ce1f11",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#noResults h2",
+      "targets": [],
+      "value": "О РЕЗУЛТАТИ. МОЛЯ, ОПИТАЙТЕ РАЗЛИЧЕН КРИТЕРИЙ ПРИ ТЪРСЕНЕТО."
+    }]
+  }, {
+    "id": "7c3ada00-1f67-428c-a63a-b5d92de9b79e",
+    "name": "FilterProgramByGenre",
+    "commands": [{
+      "id": "6c7c4218-311f-4379-a5ec-2741e2d2008e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e04bf3c1-891f-4490-a338-d6b613c4e598",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d59d8cb0-752c-4f5b-938d-34b37ca233c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-toggle",
+      "targets": [
+        ["css=.datepicker-toggle", "css:finder"],
+        ["xpath=(//button[@type='button'])[22]", "xpath:attributes"],
+        ["xpath=//button[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30a75e24-6476-4154-9a6c-17db622dbf7a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-days .next > button",
+      "targets": [
+        ["css=.datepicker-days .next > button", "css:finder"],
+        ["xpath=//th[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be749ba3-edf3-4495-89bb-a7deddb2a7c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.day:nth-child(4) > button",
+      "targets": [
+        ["css=.day:nth-child(4) > button", "css:finder"],
+        ["xpath=//td[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e24001e-0d46-4db1-ba00-f945d9ee695b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12:nth-child(2) .filter-option",
+      "targets": [
+        ["css=.col-xs-12:nth-child(2) .filter-option", "css:finder"],
+        ["xpath=//div[3]/div[2]/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ИЗБЕРЕТЕ ФОРМАТ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b17ad8e9-19a9-4adb-91d9-6966701f4476",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(9) > .opt > .text",
+      "targets": [
+        ["css=li:nth-child(9) > .opt > .text", "css:finder"],
+        ["xpath=//div[2]/div/ul/li[9]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3415ee4d-dc95-4e64-bebd-9b6e4124677a",
+      "comment": "",
+      "command": "select",
+      "target": "id=select13",
+      "targets": [],
+      "value": "label=Екшън"
+    }, {
+      "id": "7b622f21-3adc-4820-ae74-98b2d11a152b",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.row:nth-child(1) > .col-xs-12 .qb-movie-info > span:nth-child(1)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-xs-12 .qb-movie-info > span:nth-child(1)", "css:finder"],
+        ["xpath=//span/div/span", "xpath:position"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "7b77c678-c014-4940-b5f6-9245fa4b1a03",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var t = ${Test}; return t.includes('Екшън');",
+      "targets": [],
+      "value": "Word"
+    }, {
+      "id": "9c6b1061-3ff4-4881-b826-68af396fbff9",
+      "comment": "",
+      "command": "if",
+      "target": "${Word} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c455fa9-a925-4aaf-91fe-7dd2f682f03d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Valid movie genre\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "057bc4e4-ce6c-4107-b323-981223c4daf5",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae8c07b1-78f5-42ff-ba70-375ac0b182cc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Invalid movie genre\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "33a68de0-6584-4ceb-ac5c-d3e9ca417b76",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf6cf5ee-54c9-40ab-a43a-82624319e1db",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "Valid movie genre"
+    }]
+  }, {
+    "id": "7758692b-3455-453c-b49f-11edc05526fc",
+    "name": "FilterProgramByFormat",
+    "commands": [{
+      "id": "b583ac7e-b3e9-4a5d-9fb4-bd6042278904",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55216891-13e8-46b3-af5f-667b308784d6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7711898-eb1d-4819-ac19-292529db9237",
+      "comment": "",
+      "command": "click",
+      "target": "css=.qb-filter-select .btn",
+      "targets": [
+        ["css=.qb-filter-select .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[23]", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8367b30-875e-4c12-ba2c-39e66c7ff218",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=3D",
+      "targets": [
+        ["linkText=3D", "linkText"],
+        ["css=li:nth-child(5) > .opt", "css:finder"],
+        ["xpath=//div[2]/div/ul/li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'3D')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa156cf1-8252-493d-b587-27049b943b21",
+      "comment": "",
+      "command": "select",
+      "target": "id=select13",
+      "targets": [],
+      "value": "label=3D"
+    }, {
+      "id": "9cc09ec2-cb48-4566-811f-accf3f58781b",
+      "comment": "",
+      "command": "store",
+      "target": "3D",
+      "targets": [],
+      "value": "format"
+    }, {
+      "id": "7b39a3f7-3193-42a9-ade9-1da8094688a7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(1) > .col-xs-12:nth-child(1) .qb-screening-attributes:nth-child(1) span:nth-child(1)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-xs-12:nth-child(1) .qb-screening-attributes:nth-child(1) span:nth-child(1)", "css:finder"],
+        ["xpath=//li/span", "xpath:position"]
+      ],
+      "value": "${format}"
+    }]
+  }, {
+    "id": "2bcfa187-4b76-41a2-9dd3-a62384f9a092",
+    "name": "FilterProgramBySubtitles",
+    "commands": [{
+      "id": "8ee79f67-7998-4c97-90ff-6ceda7a2d509",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "203d3faa-43c7-4ed0-9b78-9f870fcc7f70",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c2525c7-1f99-4329-9d43-b0f02f36113c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b",
+      "targets": [
+        ["css=.b", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "beb91081-eab9-4051-a425-e45b41feca61",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-days .next > button",
+      "targets": [
+        ["css=.datepicker-days .next > button", "css:finder"],
+        ["xpath=//th[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3937265-c966-4dbc-a4b3-0368da4cbaff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.day:nth-child(4) > button",
+      "targets": [
+        ["css=.day:nth-child(4) > button", "css:finder"],
+        ["xpath=//td[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8c31861-1f73-43a7-8f5b-73e2a83596cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12:nth-child(2) .filter-option",
+      "targets": [
+        ["css=.col-xs-12:nth-child(2) .filter-option", "css:finder"],
+        ["xpath=//div[3]/div[2]/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ИЗБЕРЕТЕ ФОРМАТ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab79dae1-9127-452e-981c-dd2ad63140dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(25) .text",
+      "targets": [
+        ["css=li:nth-child(25) .text", "css:finder"],
+        ["xpath=//li[25]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Субтитриран')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c859b73-7203-4af8-a3c4-71d65f083720",
+      "comment": "",
+      "command": "select",
+      "target": "id=select13",
+      "targets": [],
+      "value": "label=Субтитриран"
+    }, {
+      "id": "75d76a7d-c353-4c4c-993a-58c592954ebb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.qb-movie-attributes:nth-child(10) > li:nth-child(5) > span",
+      "targets": [
+        ["css=.qb-movie-attributes:nth-child(10) > li:nth-child(5) > span", "css:finder"],
+        ["xpath=//li[5]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'бълг.')]", "xpath:innerText"]
+      ],
+      "value": "бълг."
+    }]
+  }, {
+    "id": "f7793c61-e277-4550-b5e8-2a70bc496831",
+    "name": "FilterProgramByName",
+    "commands": [{
+      "id": "6c528857-ac65-4b7a-ab48-55ec7652ccaf",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3a0596f-5f11-4207-8fff-9de0a959facd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3eecae88-d3a9-4fe5-9fa4-06905c8a5347",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12:nth-child(3) .filter-option",
+      "targets": [
+        ["css=.col-xs-12:nth-child(3) .filter-option", "css:finder"],
+        ["xpath=//div[3]/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ИЗБЕРЕТЕ ФИЛМ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ac465d3-9c30-496f-841f-cf535197a2aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-menu:nth-child(1) li:nth-child(5) .text",
+      "targets": [
+        ["css=.dropdown-menu:nth-child(1) li:nth-child(5) .text", "css:finder"],
+        ["xpath=//div[2]/div/ul/li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Игрите на глада: Балада за пойни птици и змии')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b4cd86e-3e08-4db4-911a-67bd1481f98e",
+      "comment": "",
+      "command": "select",
+      "target": "id=select14",
+      "targets": [],
+      "value": "label=Игрите на глада: Балада за пойни птици и змии"
+    }, {
+      "id": "00dcfc07-e43d-4460-a56b-008f3b1112b6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.qb-movie-name",
+      "targets": [
+        ["css=.qb-movie-name", "css:finder"],
+        ["xpath=//h3", "xpath:position"]
+      ],
+      "value": "ИГРИТЕ НА ГЛАДА: БАЛАДА ЗА ПОЙНИ ПТИЦИ И ЗМИИ"
+    }]
+  }, {
+    "id": "c733a95c-3236-434a-a958-b165d7349155",
+    "name": "FilterProgramByDate",
+    "commands": [{
+      "id": "819e216c-322e-41d7-a951-b08773305be0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe93c29e-06c1-420a-8c74-475d1e2c0670",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ab22aad-a748-4172-85ac-df0fdadd8926",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-toggle",
+      "targets": [
+        ["css=.datepicker-toggle", "css:finder"],
+        ["xpath=(//button[@type='button'])[22]", "xpath:attributes"],
+        ["xpath=//button[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7f8babc-0d21-44ee-a72a-ce4b0caf16e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-days .next > button",
+      "targets": [
+        ["css=.datepicker-days .next > button", "css:finder"],
+        ["xpath=//th[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86adf09d-c189-4a85-a770-81a421c6249f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.day:nth-child(4) > button",
+      "targets": [
+        ["css=.day:nth-child(4) > button", "css:finder"],
+        ["xpath=//td[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f43f0196-829e-4dde-b433-37d003c78454",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h5",
+      "targets": [
+        ["css=h5", "css:finder"],
+        ["xpath=//h5", "xpath:position"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "a91ff7c2-0068-47e4-8fd2-3217b3e2af7e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var t = ${Test}; return t.includes('01/02/2024');",
+      "targets": [],
+      "value": "Date"
+    }, {
+      "id": "5de6cc13-d25b-47c3-a395-6bf9a0fa988b",
+      "comment": "",
+      "command": "if",
+      "target": "${Date} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4796409-5fb1-405b-a108-4b695d13e582",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Correct date\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "7889aff1-777a-4c8b-bbed-18b36e4d0b72",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2897eb83-58cd-4a88-afc7-8e9c71851b3c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Incorrect date\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "d0b84ea1-0d15-46df-bee6-33304c88d5e7",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "831038f8-6808-452c-a324-3e236502c748",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "Correct date"
+    }]
+  }, {
+    "id": "1d6d1334-bb32-4a2c-9d87-4144e6813233",
+    "name": "FilterProgramByFormat4DX",
+    "commands": [{
+      "id": "ec1a3691-eb6d-4dee-8102-4e6e98965f4b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94b19618-2373-4658-979a-4973ebef07ce",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26b692cd-d8bf-491e-91b7-f9aabcb510d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown:nth-child(4) img",
+      "targets": [
+        ["css=.dropdown:nth-child(4) img", "css:finder"],
+        ["xpath=//div[@id='defaultmenu']/ul/li[4]/a/img", "xpath:idRelative"],
+        ["xpath=//li[4]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e55ab6d8-c195-4db0-a5f5-be2d271b02ad",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.qb-screening-attributes > li:nth-child(1) > span",
+      "targets": [
+        ["css=.qb-screening-attributes > li:nth-child(1) > span", "css:finder"],
+        ["xpath=//div[2]/div/div/ul/li/span", "xpath:position"],
+        ["xpath=//span[contains(.,'4DX')]", "xpath:innerText"]
+      ],
+      "value": "4DX"
+    }]
+  }, {
+    "id": "2964b74e-db17-4fa4-9d6f-346cd99c602f",
+    "name": "FilterProgramByFormatIMAX",
+    "commands": [{
+      "id": "c2782c35-707a-4256-b3fe-4019a1cdc0a1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b4f019a-d228-44a5-83d1-b2e14138a66e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f9d2eca-9b18-45a8-af45-ac4ba78fc4d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown:nth-child(5) img",
+      "targets": [
+        ["css=.dropdown:nth-child(5) img", "css:finder"],
+        ["xpath=//div[@id='defaultmenu']/ul/li[5]/a/img", "xpath:idRelative"],
+        ["xpath=//li[5]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26c4c583-01a7-4297-9d36-a393793f84a7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.qb-screening-attributes > li:nth-child(1) > span",
+      "targets": [
+        ["css=.qb-screening-attributes > li:nth-child(1) > span", "css:finder"],
+        ["xpath=//div[2]/div/div/ul/li/span", "xpath:position"],
+        ["xpath=//span[contains(.,'IMAX')]", "xpath:innerText"]
+      ],
+      "value": "IMAX"
+    }]
+  }, {
+    "id": "94b96bb5-c0d5-4ea9-937a-6f9190883bfd",
+    "name": "SearchMovieOtherOutput",
+    "commands": [{
+      "id": "4503c97d-654e-4aec-a1b6-ee93379c1cf3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab978b65-c0a4-446d-adeb-bf51d6f12013",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "982x482",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "411bd492-ae86-46be-b9a5-731cbf19666f",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "adc70d40-aefc-4ed5-a115-d58b2a561daa",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": "игрите на глада"
+    }, {
+      "id": "0318050a-944c-4019-a6c2-c3904570aa3d",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//form[@id='search']/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/form/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "5c5ed903-e91a-434e-8f93-134160bf00b7",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.media:nth-child(2) h2",
+      "targets": [],
+      "value": "Test"
+    }, {
+      "id": "2dc2472c-1d99-4f01-9773-306a6279c22c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var t = ${Test}; return t.toLowerCase().includes('игрите на глада');",
+      "targets": [],
+      "value": "word"
+    }, {
+      "id": "0e261e90-911c-4643-bc8e-674fde786214",
+      "comment": "",
+      "command": "if",
+      "target": "${word} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48316b66-aa4b-4877-ae09-3c236f004896",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Correct search\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "ba6d246e-2d48-422f-9762-3b3cdd86e31a",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a346145-6e93-4682-92e4-58fa7e66b237",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Incorrect search\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "d5e84866-f5b4-46cc-ac71-bfc0bbfc5450",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bd9b2d2-e3dc-4878-b296-369a627f77d4",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "Correct search"
+    }]
+  }, {
+    "id": "b28f8f7d-1069-4652-af8f-ad9b830ef50f",
+    "name": "SearchCinemaForMovieProgram",
+    "commands": [{
+      "id": "cf063360-bd67-47cf-8155-ee5fc446c6ab",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "774df616-674d-417a-b4cf-ecfd8dcf1acb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "053ed36c-777b-4205-8633-6ad174ec6e92",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Промяна",
+      "targets": [
+        ["linkText=Промяна", "linkText"],
+        ["css=.location-change-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Промяна')]", "xpath:link"],
+        ["xpath=(//a[@type='link'])[2]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Промяна')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6aaa7907-4771-4496-b565-d07132ab645e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12:nth-child(1) .filter-option",
+      "targets": [
+        ["css=.col-xs-12:nth-child(1) .filter-option", "css:finder"],
+        ["xpath=//div[3]/div[2]/div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ИЗБЕРЕТЕ КИНО')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6c21005-de1b-4762-babb-442e5304c892",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Пловдив",
+      "targets": [
+        ["linkText=Пловдив", "linkText"],
+        ["css=.dropdown-menu:nth-child(1) > .dropdown-menu > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//div[2]/div/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3f9b016-64e2-44da-9bec-3bac80629d0c",
+      "comment": "",
+      "command": "select",
+      "target": "id=select10",
+      "targets": [],
+      "value": "label=Пловдив"
+    }, {
+      "id": "c5fb29f9-a326-4e73-95c6-569cd66d50a6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.qb-title > h2",
+      "targets": [
+        ["css=.qb-title > h2", "css:finder"],
+        ["xpath=//section/div/div/div/div/h2", "xpath:position"]
+      ],
+      "value": "ПРОЖЕКЦИИ: ПЛОВДИВ"
+    }]
+  }, {
+    "id": "8485bb87-9de6-462d-ba32-f70c6d185fc3",
+    "name": "SearchCinemaForMovie",
+    "commands": [{
+      "id": "b03fa3f5-80ba-45ba-b25a-89ebfeac09c7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "650482aa-5185-48c0-b652-49bd4fda0a2e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87c857a8-1e73-4552-af7e-6a8b26759dfa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-3 .filter-option",
+      "targets": [
+        ["css=.col-sm-3 .filter-option", "css:finder"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab35555c-6834-4277-b74b-166e72048819",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Варна",
+      "targets": [
+        ["linkText=Варна", "linkText"],
+        ["css=.dropdown-menu:nth-child(1) > .dropdown-menu > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//div[2]/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3413fa16-157d-4dbf-958f-6a70ff5b2d46",
+      "comment": "",
+      "command": "select",
+      "target": "id=select9",
+      "targets": [],
+      "value": "label=Варна"
+    }, {
+      "id": "e228152f-aae2-43c2-a19b-0a59749c8258",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12:nth-child(3) .filter-option",
+      "targets": [
+        ["css=.col-xs-12:nth-child(3) .filter-option", "css:finder"],
+        ["xpath=//div[3]/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ИЗБЕРЕТЕ ФИЛМ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69284f99-1f16-455e-89d0-2eb27500c595",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-menu:nth-child(1) li:nth-child(2) .text",
+      "targets": [
+        ["css=.dropdown-menu:nth-child(1) li:nth-child(2) .text", "css:finder"],
+        ["xpath=//div[2]/div/ul/li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Аквамен и изгубеното кралство')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "62ce4c63-6479-477c-bbd1-fa5de47d3726",
+      "comment": "",
+      "command": "select",
+      "target": "id=select14",
+      "targets": [],
+      "value": "label=Аквамен и изгубеното кралство"
+    }, {
+      "id": "1ed5edef-4bc5-4433-86ed-33d8c198f1ba",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(1) > .col-xs-12 .qb-movie-name",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-xs-12 .qb-movie-name", "css:finder"],
+        ["xpath=//h3", "xpath:position"]
+      ],
+      "value": "АКВАМЕН И ИЗГУБЕНОТО КРАЛСТВО"
+    }, {
+      "id": "26865769-a43a-4bc2-8e59-f8b8aad117ca",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.dropup .filter-option",
+      "targets": [
+        ["css=.dropup .filter-option", "css:finder"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
+      ],
+      "value": "ВАРНА"
+    }]
+  }, {
+    "id": "b49ea88e-5d78-4c2c-8294-573de589193e",
+    "name": "BookReservationBuyingSameTickets",
+    "commands": [{
+      "id": "fe056678-bcc5-47b8-ba61-20960573536b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7608635-3ea8-48e1-84cc-490093a5d45b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad24c224-e691-4abb-8d59-fcda59ffa27e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-toggle",
+      "targets": [
+        ["css=.datepicker-toggle", "css:finder"],
+        ["xpath=(//button[@type='button'])[21]", "xpath:attributes"],
+        ["xpath=//button[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ae3ea23-5688-4ee4-81b5-3c20358648cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-days .next > button",
+      "targets": [
+        ["css=.datepicker-days .next > button", "css:finder"],
+        ["xpath=//th[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d778e63-806b-4e19-a442-a3be78f7756e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.day > button",
+      "targets": [
+        ["css=.day > button", "css:finder"],
+        ["xpath=//td[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "400693ad-87a3-4446-83fd-21ecd2998111",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=21:30",
+      "targets": [
+        ["linkText=21:30", "linkText"],
+        ["css=.row:nth-child(2) .btn:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'21:30')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[12]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'21:30')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16031347-32e3-4626-a7ad-40a2358a1f82",
+      "comment": "",
+      "command": "click",
+      "target": "id=ddQunatity_4",
+      "targets": [
+        ["id=ddQunatity_4", "id"],
+        ["name=ctl00$CPH1$SelectTicketControl$TicketsSelection$ctl06$ddQunatity", "name"],
+        ["css=#ddQunatity_4", "css:finder"],
+        ["xpath=//select[@id='ddQunatity_4']", "xpath:attributes"],
+        ["xpath=//table[@id='TicketsSelection']/tbody/tr[6]/td[4]/select", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[4]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92725e2f-17bf-48b6-91ca-d813a8a55047",
+      "comment": "",
+      "command": "select",
+      "target": "id=ddQunatity_4",
+      "targets": [],
+      "value": "label=3"
+    }, {
+      "id": "3f5d993f-c4c9-474b-9581-cc6752f09e0d",
+      "comment": "",
+      "command": "click",
+      "target": "id=lbSelectSeats",
+      "targets": [
+        ["id=lbSelectSeats", "id"],
+        ["css=#lbSelectSeats", "css:finder"],
+        ["xpath=//a[contains(text(),'Избор на места')]", "xpath:link"],
+        ["xpath=//a[@id='lbSelectSeats']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[8]/div/div[4]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(\"ctl00$CPH1$lbSelectSeats\", \"\", true, \"\", \"\", false, true))')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d45470a5-4da3-4a40-962e-88da7d6ba4ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=myCanvas",
+      "targets": [
+        ["id=myCanvas", "id"],
+        ["css=#myCanvas", "css:finder"],
+        ["xpath=//canvas[@id='myCanvas']", "xpath:attributes"],
+        ["xpath=//div[@id='panzoom-parent']/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56d27d14-79ad-441d-9ce4-950c87930ab7",
+      "comment": "",
+      "command": "click",
+      "target": "id=myCanvas",
+      "targets": [
+        ["id=myCanvas", "id"],
+        ["css=#myCanvas", "css:finder"],
+        ["xpath=//canvas[@id='myCanvas']", "xpath:attributes"],
+        ["xpath=//div[@id='panzoom-parent']/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11f70ace-6d7d-47ab-8b3b-29d38f5e4a53",
+      "comment": "",
+      "command": "click",
+      "target": "id=myCanvas",
+      "targets": [
+        ["id=myCanvas", "id"],
+        ["css=#myCanvas", "css:finder"],
+        ["xpath=//canvas[@id='myCanvas']", "xpath:attributes"],
+        ["xpath=//div[@id='panzoom-parent']/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "534540c7-6437-4775-a929-6fb9d5760f97",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNext",
+      "targets": [
+        ["id=btnNext", "id"],
+        ["css=#btnNext", "css:finder"],
+        ["xpath=//a[contains(text(),'Продължи')]", "xpath:link"],
+        ["xpath=//a[@id='btnNext']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[8]/div/div[5]/a", "xpath:idRelative"],
+        ["xpath=//div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f416d5be-bcf8-4c29-ba4c-b94f4371cd65",
+      "comment": "",
+      "command": "store",
+      "target": "17.50",
+      "targets": [],
+      "value": "TicketPrice"
+    }, {
+      "id": "1d57e34f-2522-4ee1-a7fd-6dbe39a0cd02",
+      "comment": "",
+      "command": "store",
+      "target": "3",
+      "targets": [],
+      "value": "TicketNumber"
+    }, {
+      "id": "ae5414ee-4e4e-410d-9919-957126ef3151",
+      "comment": "",
+      "command": "store",
+      "target": "0.80",
+      "targets": [],
+      "value": "Fee"
+    }, {
+      "id": "de4da0f5-3147-43f6-aedf-256f58064678",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (${TicketPrice} + ${Fee}) * ${TicketNumber}",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "6541fd08-9a96-44eb-b5a4-b2677127fa16",
+      "comment": "",
+      "command": "verify",
+      "target": "54.90",
+      "targets": [],
+      "value": "${output}"
+    }, {
+      "id": "633059ac-8c5c-4c64-8a76-404918a004ef",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.total-sum",
+      "targets": [
+        ["css=.total-sum", "css:finder"],
+        ["xpath=//div[@id='pagecontainer']/div/div[7]/div[2]/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/div", "xpath:position"]
+      ],
+      "value": "Общо (с всички данъци и такси) 54.90 лв"
+    }]
+  }, {
+    "id": "f0a71e11-9190-4cc0-bcad-5d4ae4185d16",
+    "name": "OverviewMovieDescription",
+    "commands": [{
+      "id": "cef12b15-40f3-4a3f-9e0a-d7f348e9067b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "629c26ec-f14c-4664-9945-26b6b172a4c8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1097x892",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cec6cd2f-41f4-4249-bc82-6341d863df90",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.row:nth-child(1) > .col-xs-12 .qb-movie-name",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-xs-12 .qb-movie-name", "css:finder"],
+        ["xpath=//h3", "xpath:position"]
+      ],
+      "value": "title1"
+    }, {
+      "id": "5d59d6b7-f186-4ca1-bf68-5658f8c12146",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.row:nth-child(1) > .col-xs-12 .qb-movie-info > span:nth-child(1)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-xs-12 .qb-movie-info > span:nth-child(1)", "css:finder"],
+        ["xpath=//span/div/span", "xpath:position"]
+      ],
+      "value": "genre1"
+    }, {
+      "id": "4448673a-c1d4-4ac4-a078-d17332eb51bf",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.row:nth-child(1) > .col-xs-12 .qb-movie-info > span:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-xs-12 .qb-movie-info > span:nth-child(2)", "css:finder"],
+        ["xpath=//div/span[2]", "xpath:position"]
+      ],
+      "value": "duration1"
+    }, {
+      "id": "67d21b86-6e00-4f9f-b3ba-2a41fd74d231",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .col-xs-12 .qb-movie-name",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-xs-12 .qb-movie-name", "css:finder"],
+        ["xpath=//h3", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8989e0ba-cf79-458b-83e5-6e181b5c0cb9",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=li > .upper-case",
+      "targets": [
+        ["css=li > .upper-case", "css:finder"],
+        ["xpath=//section[@id='trailer']/div/div[2]/div/div/ul/li/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": "title2"
+    }, {
+      "id": "8ec18908-5a32-478b-85bc-28c2a7d80f04",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.tbl-row:nth-child(2) > dd",
+      "targets": [
+        ["css=.tbl-row:nth-child(2) > dd", "css:finder"],
+        ["xpath=//section[@id='more-info']/div/div[2]/div/dl/div[2]/dd", "xpath:idRelative"],
+        ["xpath=//div[2]/dd", "xpath:position"],
+        ["xpath=//dd[contains(.,'Екшън, Приключенски, Фентъзи')]", "xpath:innerText"]
+      ],
+      "value": "genre2"
+    }, {
+      "id": "f5ed2372-076c-478d-b978-63f38470bae3",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-xs-6:nth-child(2) > .info-descr",
+      "targets": [
+        ["css=.col-xs-6:nth-child(2) > .info-descr", "css:finder"],
+        ["xpath=//section[@id='more-info']/div/div[2]/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'124 мин.')]", "xpath:innerText"]
+      ],
+      "value": "duration2"
+    }, {
+      "id": "09e17eb1-f0a4-4240-8ef7-6009bca69903",
+      "comment": "",
+      "command": "if",
+      "target": "${title1} === ${title2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68426bf9-6c35-4334-9692-76638a4d38b3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Correct title\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "732b1eaa-410b-4be8-b1da-3555a587ede2",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10318581-2571-498f-a9fe-22dd702008d5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Incorrect title\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "a6a30c40-642b-4f3f-a2c0-57d001d74a51",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbc60681-7e23-47d4-aead-1558b5e661ee",
+      "comment": "",
+      "command": "if",
+      "target": "${genre1} === ${genre2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38760644-153c-49e6-a3bd-b5b976b42193",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Correct genre\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "6b04038b-43ff-4fdf-802a-17cf31fca14f",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "358a2232-e0ac-4453-a5a6-6f83f2b766f9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Incorrect genre\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "4c1f8cab-97f3-4411-bb6a-2aab041619d2",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b25585bd-d651-408f-86a2-3b3616a47ee3",
+      "comment": "",
+      "command": "if",
+      "target": "${duration1} === ${duration2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ddb70d5c-7be1-4acd-82f6-ea8778977513",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Correct duration\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "150d1150-17af-4c12-9a74-876bd34aafe6",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f40d7e94-cbad-4656-8bb1-eef45e9fa42e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Incorrect duration\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "274ab060-8d29-48b6-aa1c-e105fe30970e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9d0a307c-6b26-4932-9a0f-f63a0e0c2171",
+    "name": "OverviewMovieTrailer",
+    "commands": [{
+      "id": "379c8e5f-1f84-44e3-ba63-20084e0e23e8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b06de51b-ec69-4342-a0e8-b7326a6d5414",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1051x806",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db87dc95-ed23-43f1-90c2-29a6d0dbfe14",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,12)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bb704ae-f5ff-445d-b24f-f18c6321301e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .col-xs-12 .circle",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-xs-12 .circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dff9ef8-c81a-46e3-9da4-a46bb5bc0b24",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=9",
+      "targets": [
+        ["index=9"]
+      ],
+      "value": ""
+    }, {
+      "id": "200339bb-ba38-462b-b105-490bf86bb06a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.video-stream",
+      "targets": [
+        ["css=.video-stream", "css:finder"],
+        ["xpath=//div[@id='movie_player']/div/video", "xpath:idRelative"],
+        ["xpath=//video", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bba89f61-4d48-4537-83a9-b4accd9e8f94",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.video-stream",
+      "targets": [
+        ["css=.video-stream", "css:finder"],
+        ["xpath=//div[@id='movie_player']/div/video", "xpath:idRelative"],
+        ["xpath=//video", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52892831-1557-4cc1-8902-8ddd36fd76cf",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b91c95e-970b-4152-b76f-f127fef03033",
+      "comment": "",
+      "command": "click",
+      "target": "css=header > .close",
+      "targets": [
+        ["css=header > .close", "css:finder"],
+        ["xpath=//header/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ecbd0bf-f17e-4684-8bf6-6f12bf9b32d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .col-xs-12 .qb-movie-name",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-xs-12 .qb-movie-name", "css:finder"],
+        ["xpath=//h3", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f617d2a2-90bc-457d-8b92-0e56936a87a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.slick-slide-play",
+      "targets": [
+        ["css=.slick-slide-play", "css:finder"],
+        ["xpath=//div[@id='slick-trailers']/div/div/div/a/div/div[2]", "xpath:idRelative"],
+        ["xpath=//a/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f337baa-c5a2-4e65-8d55-297495bdfa41",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=3",
+      "targets": [
+        ["index=3"]
+      ],
+      "value": ""
+    }, {
+      "id": "a43ec8ef-4d97-436a-a8a1-35845d6ea093",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ytp-large-play-button",
+      "targets": [
+        ["css=.ytp-large-play-button", "css:finder"],
+        ["xpath=//div[@id='movie_player']/div[4]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48fe0c0b-f0bc-4d03-923f-1d0379ed9537",
+      "comment": "",
+      "command": "click",
+      "target": "css=.video-stream",
+      "targets": [
+        ["css=.video-stream", "css:finder"],
+        ["xpath=//div[@id='movie_player']/div/video", "xpath:idRelative"],
+        ["xpath=//video", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48fd95de-7146-46c7-9404-d17976cd8365",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.video-stream",
+      "targets": [
+        ["css=.video-stream", "css:finder"],
+        ["xpath=//div[@id='movie_player']/div/video", "xpath:idRelative"],
+        ["xpath=//video", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "998f8724-4dc3-4af9-a4a4-3643189eda75",
+    "name": "OverviewWebsitePages1",
+    "commands": [{
+      "id": "5e37df55-fd85-467c-958d-da0bbd9d6cb2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67877922-9627-44df-a897-b42eb78ba1f8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1097x892",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdcafbc1-ea20-4809-9737-31bea619cb2f",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.dropdown:nth-child(2) > .h2",
+      "targets": [
+        ["css=.dropdown:nth-child(2) > .h2", "css:finder"],
+        ["xpath=//a[contains(text(),'оферти')]", "xpath:link"],
+        ["xpath=//div[@id='defaultmenu']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/offers')]", "xpath:href"],
+        ["xpath=//nav/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": "offers"
+    }, {
+      "id": "59238ba9-124d-4edd-ab96-3dbbca426f5d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown:nth-child(2) > .h2",
+      "targets": [
+        ["css=.dropdown:nth-child(2) > .h2", "css:finder"],
+        ["xpath=//a[contains(text(),'оферти')]", "xpath:link"],
+        ["xpath=//div[@id='defaultmenu']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/offers')]", "xpath:href"],
+        ["xpath=//nav/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f59ebeef-4ec6-4365-970e-02d3410df326",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'ОФЕРТИ')]", "xpath:innerText"]
+      ],
+      "value": "${offers}"
+    }, {
+      "id": "3e3644c5-b32b-4ac7-9132-957a3665488b",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.row:nth-child(1) > .col-md-3:nth-child(2) strong",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-md-3:nth-child(2) strong", "css:finder"],
+        ["xpath=//strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'3D ПРОМО ВТОРНИК')]", "xpath:innerText"]
+      ],
+      "value": "tuesday"
+    }, {
+      "id": "ab00718f-64e5-4c38-a718-71777b24c59e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .col-md-3:nth-child(2) strong",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-md-3:nth-child(2) strong", "css:finder"],
+        ["xpath=//strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'3D ПРОМО ВТОРНИК')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b497a14-a79f-473f-a134-f4a6a9d0dd14",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'3D ПРОМО ВТОРНИК')]", "xpath:innerText"]
+      ],
+      "value": "${tuesday}"
+    }, {
+      "id": "3310ab44-c34f-418b-ab70-844997572b85",
+      "comment": "",
+      "command": "storeText",
+      "target": "linkText=ВАУЧЕРИ",
+      "targets": [
+        ["linkText=ВАУЧЕРИ", "linkText"],
+        ["css=.dropdown:nth-child(3) > .h2", "css:finder"],
+        ["xpath=//a[contains(text(),'ВАУЧЕРИ')]", "xpath:link"],
+        ["xpath=//div[@id='defaultmenu']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gift-vouchers')]", "xpath:href"],
+        ["xpath=//nav/div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ВАУЧЕРИ')]", "xpath:innerText"]
+      ],
+      "value": "vouchers"
+    }, {
+      "id": "2d401993-c179-4873-ac16-bfba59efab07",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=ВАУЧЕРИ",
+      "targets": [
+        ["linkText=ВАУЧЕРИ", "linkText"],
+        ["css=.dropdown:nth-child(3) > .h2", "css:finder"],
+        ["xpath=//a[contains(text(),'ВАУЧЕРИ')]", "xpath:link"],
+        ["xpath=//div[@id='defaultmenu']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gift-vouchers')]", "xpath:href"],
+        ["xpath=//nav/div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ВАУЧЕРИ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b44fbfa-805e-4243-9b30-4a0aaeda8be7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'ВАУЧЕРИ')]", "xpath:innerText"]
+      ],
+      "value": "${vouchers}"
+    }, {
+      "id": "f40b8db4-e464-4894-9799-81b7e6f4e0e6",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-md-6:nth-child(2) strong",
+      "targets": [
+        ["css=.col-md-6:nth-child(2) strong", "css:finder"],
+        ["xpath=//div[2]/div/div[2]/p/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'ВАУЧЕРИ ЗА КОМПАНИИ')]", "xpath:innerText"]
+      ],
+      "value": "companies"
+    }, {
+      "id": "1295bf75-bb55-4a81-85c3-0d30368c8113",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=ПОВЕЧЕ ЗА ВАУЧЕРИТЕ ЗА КОМПАНИИ",
+      "targets": [
+        ["linkText=ПОВЕЧЕ ЗА ВАУЧЕРИТЕ ЗА КОМПАНИИ", "linkText"],
+        ["css=.col-md-6:nth-child(2) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'ПОВЕЧЕ ЗА ВАУЧЕРИТЕ ЗА КОМПАНИИ')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/vouchers-for-company')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ПОВЕЧЕ ЗА ВАУЧЕРИТЕ ЗА КОМПАНИИ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "288a68a8-9fef-4014-8bd3-8d6302f7488f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'ВАУЧЕРИ ЗА КОМПАНИИ')]", "xpath:innerText"]
+      ],
+      "value": "${companies}"
+    }]
+  }, {
+    "id": "5c9b7294-19d8-4080-81ae-940cfee97fd4",
+    "name": "OverviewWebsitePages2",
+    "commands": [{
+      "id": "a8b00eeb-e40a-43bc-8b0f-8e9057714ba9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2b01eab-80cd-482e-8053-559196f05763",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1097x892",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "304f36ba-3e48-48f6-a950-30f0b9e4341d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3965)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff58cfaa-8b27-4b3a-97cc-e008b342d3f3",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=promoTab6_tab",
+      "targets": [
+        ["id=promoTab6_tab", "id"],
+        ["linkText=ОТ БАРА", "linkText"],
+        ["css=#promoTab6_tab", "css:finder"],
+        ["xpath=//a[contains(text(),'ОТ БАРА')]", "xpath:link"],
+        ["xpath=//a[@id='promoTab6_tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='experiencesTabs']/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#0')])[6]", "xpath:href"],
+        ["xpath=//section[2]/div/div/div/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ОТ БАРА')]", "xpath:innerText"]
+      ],
+      "value": "bar"
+    }, {
+      "id": "4243e204-78be-4825-bb7a-555ff6d03945",
+      "comment": "",
+      "command": "click",
+      "target": "id=promoTab6_tab",
+      "targets": [
+        ["id=promoTab6_tab", "id"],
+        ["linkText=ОТ БАРА", "linkText"],
+        ["css=#promoTab6_tab", "css:finder"],
+        ["xpath=//a[contains(text(),'ОТ БАРА')]", "xpath:link"],
+        ["xpath=//a[@id='promoTab6_tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='experiencesTabs']/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#0')])[6]", "xpath:href"],
+        ["xpath=//section[4]/div/div/div/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ОТ БАРА')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50662932-8519-4b3c-8e6d-60232362df32",
+      "comment": "",
+      "command": "click",
+      "target": "css=#tab_promoTab6 .col-xs-12:nth-child(1) .card-img-top",
+      "targets": [
+        ["css=#tab_promoTab6 .col-xs-12:nth-child(1) .card-img-top", "css:finder"],
+        ["xpath=//img[@alt='Menu']", "xpath:img"],
+        ["xpath=//div[@id='tab_promoTab6']/div/div/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86e7cb7e-e332-4a8c-a06c-e5dac42ff0b5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'ОТ БАРА')]", "xpath:innerText"]
+      ],
+      "value": "${bar}"
+    }, {
+      "id": "3b8ec221-abc9-4d97-920f-21f136d8f3dd",
+      "comment": "",
+      "command": "storeText",
+      "target": "linkText=Общи правила",
+      "targets": [
+        ["linkText=Общи правила", "linkText"],
+        ["css=.col-xs-6:nth-child(3) > .footer-group-item:nth-child(2) > .posMessageItemLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Общи правила')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/regulations')])[3]", "xpath:href"],
+        ["xpath=//div[3]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Общи правила')]", "xpath:innerText"]
+      ],
+      "value": "rules1"
+    }, {
+      "id": "8444ec64-4367-4898-a35b-2960338422f6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Общи правила",
+      "targets": [
+        ["linkText=Общи правила", "linkText"],
+        ["css=.col-xs-6:nth-child(3) > .footer-group-item:nth-child(2) > .posMessageItemLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Общи правила')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/regulations')])[3]", "xpath:href"],
+        ["xpath=//div[3]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Общи правила')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b414d07-dc97-4db6-b74d-49c3ada623ad",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "rules2"
+    }, {
+      "id": "e439dde8-4b2e-4c89-a5c8-2bd15e136e31",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${rules1}.toLowerCase() == ${rules2}.toLowerCase()",
+      "targets": [],
+      "value": "ans"
+    }, {
+      "id": "ff67ae6a-72b9-44a9-8602-8666c17cd06b",
+      "comment": "",
+      "command": "if",
+      "target": "${ans} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9c94704-45ee-411a-bee9-d8690dbc4df0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Correct search\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "c53c8430-b352-488b-b1ba-bd23679166f3",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5ad3f66-4630-49c5-bd3f-9f47a727783f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Incorrect search\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "5446fa8d-dbf1-4b37-b060-b3806ba8d2dd",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e440be98-652c-4a6a-91ce-a30e229bf56b",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "Correct search"
+    }]
+  }, {
+    "id": "e3d7a41f-a561-4c4d-8a55-af2487a98b08",
+    "name": "OverviewWebsiteLinks1",
+    "commands": [{
+      "id": "a6dbb66b-2687-475d-a292-c2ca60d0ba61",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f3aefcb-967a-4975-a776-bf8e875e23e3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44c9085e-d342-46e8-90f7-9bff862289de",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3166.39990234375)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b20780be-baa5-49e0-a8bf-c6632cc71146",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "linkText=Facebook@href",
+      "targets": [],
+      "value": "link"
+    }, {
+      "id": "46b191b7-3712-4fda-983a-62aef07ffb3a",
+      "comment": "",
+      "command": "assert",
+      "target": "link",
+      "targets": [],
+      "value": "https://www.facebook.com/CinemaCityBulgaria/"
+    }, {
+      "id": "76784318-8b7c-4d82-b298-e463e2af3d1e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Facebook",
+      "targets": [
+        ["linkText=Facebook", "linkText"],
+        ["css=.col-xs-6:nth-child(4) > .footer-group-item:nth-child(2) > .posMessageItemLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Facebook')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.facebook.com/CinemaCityBulgaria/')]", "xpath:href"],
+        ["xpath=//div[4]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Facebook')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "99ad1ee9-f8eb-450c-aff6-1a695a9388ee",
+    "name": "BookReservationBuyingDifferentTickets",
+    "commands": [{
+      "id": "140b2b2f-3e87-43e1-bc33-a206a142365e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20c86dd9-5c6c-4e3d-a7c0-8da0321fe55d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d9f7865-4b86-4dc8-b2a5-6e863665af97",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,833.5999755859375)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1908385-c63f-454e-96a9-933c1ae16513",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-toggle",
+      "targets": [
+        ["css=.datepicker-toggle", "css:finder"],
+        ["xpath=(//button[@type='button'])[21]", "xpath:attributes"],
+        ["xpath=//button[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b19ab57-8225-416f-98ac-e677feef9421",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-days .next > button",
+      "targets": [
+        ["css=.datepicker-days .next > button", "css:finder"],
+        ["xpath=//th[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cdae46f-cb56-4bee-9054-75204bd8f589",
+      "comment": "",
+      "command": "click",
+      "target": "css=.day > button",
+      "targets": [
+        ["css=.day > button", "css:finder"],
+        ["xpath=//td[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "847756a2-c2e8-4b9c-8b15-88f9842486dc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=21:30",
+      "targets": [
+        ["linkText=21:30", "linkText"],
+        ["css=.row:nth-child(2) .btn:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'21:30')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[12]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'21:30')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f06c78cd-5f50-4a54-a068-3d038a9892d3",
+      "comment": "",
+      "command": "click",
+      "target": "id=ddQunatity_4",
+      "targets": [
+        ["id=ddQunatity_4", "id"],
+        ["name=ctl00$CPH1$SelectTicketControl$TicketsSelection$ctl06$ddQunatity", "name"],
+        ["css=#ddQunatity_4", "css:finder"],
+        ["xpath=//select[@id='ddQunatity_4']", "xpath:attributes"],
+        ["xpath=//table[@id='TicketsSelection']/tbody/tr[6]/td[4]/select", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[4]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8eb7412e-d646-480c-8960-747db2b76a04",
+      "comment": "",
+      "command": "select",
+      "target": "id=ddQunatity_4",
+      "targets": [],
+      "value": "label=2"
+    }, {
+      "id": "82281b2c-6c73-4818-88ac-aa9e27448d1f",
+      "comment": "",
+      "command": "click",
+      "target": "id=ddQunatity_6",
+      "targets": [
+        ["id=ddQunatity_6", "id"],
+        ["name=ctl00$CPH1$SelectTicketControl$TicketsSelection$ctl08$ddQunatity", "name"],
+        ["css=#ddQunatity_6", "css:finder"],
+        ["xpath=//select[@id='ddQunatity_6']", "xpath:attributes"],
+        ["xpath=//table[@id='TicketsSelection']/tbody/tr[8]/td[4]/select", "xpath:idRelative"],
+        ["xpath=//tr[8]/td[4]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96af2cea-de6f-404a-907e-01b05f49ee5e",
+      "comment": "",
+      "command": "select",
+      "target": "id=ddQunatity_6",
+      "targets": [],
+      "value": "label=1"
+    }, {
+      "id": "176a9be3-5118-4f19-ba28-0ecb031d001c",
+      "comment": "",
+      "command": "click",
+      "target": "id=lbSelectSeats",
+      "targets": [
+        ["id=lbSelectSeats", "id"],
+        ["css=#lbSelectSeats", "css:finder"],
+        ["xpath=//a[contains(text(),'Избор на места')]", "xpath:link"],
+        ["xpath=//a[@id='lbSelectSeats']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[8]/div/div[4]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(\"ctl00$CPH1$lbSelectSeats\", \"\", true, \"\", \"\", false, true))')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1e69337-51a7-4b5d-ab91-f9a9d27b8de4",
+      "comment": "",
+      "command": "click",
+      "target": "id=myCanvas",
+      "targets": [
+        ["id=myCanvas", "id"],
+        ["css=#myCanvas", "css:finder"],
+        ["xpath=//canvas[@id='myCanvas']", "xpath:attributes"],
+        ["xpath=//div[@id='panzoom-parent']/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87a05910-96cf-4b1c-a776-03d10a376b85",
+      "comment": "",
+      "command": "click",
+      "target": "id=myCanvas",
+      "targets": [
+        ["id=myCanvas", "id"],
+        ["css=#myCanvas", "css:finder"],
+        ["xpath=//canvas[@id='myCanvas']", "xpath:attributes"],
+        ["xpath=//div[@id='panzoom-parent']/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ba5e546-6f2c-4b9b-ab62-44313b3db591",
+      "comment": "",
+      "command": "click",
+      "target": "id=myCanvas",
+      "targets": [
+        ["id=myCanvas", "id"],
+        ["css=#myCanvas", "css:finder"],
+        ["xpath=//canvas[@id='myCanvas']", "xpath:attributes"],
+        ["xpath=//div[@id='panzoom-parent']/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4daebdd-2a6c-479d-b64f-9a33be3374c8",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNext",
+      "targets": [
+        ["id=btnNext", "id"],
+        ["css=#btnNext", "css:finder"],
+        ["xpath=//a[contains(text(),'Продължи')]", "xpath:link"],
+        ["xpath=//a[@id='btnNext']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[8]/div/div[5]/a", "xpath:idRelative"],
+        ["xpath=//div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06f0b748-89c1-4224-94bc-782cc248cb3c",
+      "comment": "",
+      "command": "store",
+      "target": "14.50",
+      "targets": [],
+      "value": "ChildTicketPrice"
+    }, {
+      "id": "21dac169-bd1b-4cd5-b315-69896e72497a",
+      "comment": "",
+      "command": "store",
+      "target": "2",
+      "targets": [],
+      "value": "AdultTicketNumber"
+    }, {
+      "id": "92b3a171-1308-44c8-bd31-74a30bd8259b",
+      "comment": "",
+      "command": "store",
+      "target": "17.50",
+      "targets": [],
+      "value": "AdultTicketPrice"
+    }, {
+      "id": "62a4005c-fcde-41b5-8728-112602c2f2c2",
+      "comment": "",
+      "command": "store",
+      "target": "0.80",
+      "targets": [],
+      "value": "Fee"
+    }, {
+      "id": "7a234f5d-34ee-4ba9-90c1-69601434c1c5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (${AdultTicketPrice} + ${Fee}) * ${AdultTicketNumber}",
+      "targets": [],
+      "value": "AdultOverall"
+    }, {
+      "id": "66cdbccc-20d5-40c0-ac1e-7f9a80531c3e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${ChildTicketPrice} + ${Fee}",
+      "targets": [],
+      "value": "ChildOverall"
+    }, {
+      "id": "a71b38aa-5be9-479c-b4b4-a458151b5023",
+      "comment": "",
+      "command": "verify",
+      "target": "36.6",
+      "targets": [],
+      "value": "${AdultOverall}"
+    }, {
+      "id": "96c784dc-bed6-45f3-aacc-b4a3cc49e9e9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.total-sum",
+      "targets": [
+        ["css=.total-sum", "css:finder"],
+        ["xpath=//div[@id='pagecontainer']/div/div[7]/div[2]/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/div", "xpath:position"]
+      ],
+      "value": "Общо (с всички данъци и такси) 51.90 лв"
+    }]
+  }, {
+    "id": "f8df0254-d26f-44d7-b54a-b6bf26a619da",
+    "name": "BookReservationWithNonexistingVoucher",
+    "commands": [{
+      "id": "d30fd352-5a00-44df-9d76-8cdf8873b32b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "033d3753-903e-4e94-a020-2a9421f46196",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "791eb099-f577-4edb-b983-612914fde8c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-toggle",
+      "targets": [
+        ["css=.datepicker-toggle", "css:finder"],
+        ["xpath=(//button[@type='button'])[21]", "xpath:attributes"],
+        ["xpath=//button[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd214a0c-eb9e-4706-922b-c6e19fa5c931",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-days .next",
+      "targets": [
+        ["css=.datepicker-days .next", "css:finder"],
+        ["xpath=//th[3]", "xpath:position"],
+        ["xpath=//th[contains(.,'»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df2591a4-b5a4-4fa4-aadb-6634a2cd4f0f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.day > button",
+      "targets": [
+        ["css=.day > button", "css:finder"],
+        ["xpath=//td[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b5b75e4-f889-4e6c-a4e8-ffcd01531485",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=21:30",
+      "targets": [
+        ["linkText=21:30", "linkText"],
+        ["css=.row:nth-child(2) .btn:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'21:30')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[12]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'21:30')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c592635d-9ada-4613-8a95-c24a0dea113c",
+      "comment": "",
+      "command": "click",
+      "target": "id=ddQunatity_4",
+      "targets": [
+        ["id=ddQunatity_4", "id"],
+        ["name=ctl00$CPH1$SelectTicketControl$TicketsSelection$ctl06$ddQunatity", "name"],
+        ["css=#ddQunatity_4", "css:finder"],
+        ["xpath=//select[@id='ddQunatity_4']", "xpath:attributes"],
+        ["xpath=//table[@id='TicketsSelection']/tbody/tr[6]/td[4]/select", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[4]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5cbc6652-b322-4ace-974e-c4eb94d8bf45",
+      "comment": "",
+      "command": "select",
+      "target": "id=ddQunatity_4",
+      "targets": [],
+      "value": "label=2"
+    }, {
+      "id": "26149691-9443-4dd3-864f-09e977c050f8",
+      "comment": "",
+      "command": "click",
+      "target": "id=lbSelectSeats",
+      "targets": [
+        ["id=lbSelectSeats", "id"],
+        ["css=#lbSelectSeats", "css:finder"],
+        ["xpath=//a[contains(text(),'Избор на места')]", "xpath:link"],
+        ["xpath=//a[@id='lbSelectSeats']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[8]/div/div[4]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(\"ctl00$CPH1$lbSelectSeats\", \"\", true, \"\", \"\", false, true))')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09b8f557-21b7-4af0-b439-2b626349df70",
+      "comment": "",
+      "command": "click",
+      "target": "id=myCanvas",
+      "targets": [
+        ["id=myCanvas", "id"],
+        ["css=#myCanvas", "css:finder"],
+        ["xpath=//canvas[@id='myCanvas']", "xpath:attributes"],
+        ["xpath=//div[@id='panzoom-parent']/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d0221d2-5919-411c-b7c1-694cd013ad10",
+      "comment": "",
+      "command": "click",
+      "target": "id=myCanvas",
+      "targets": [
+        ["id=myCanvas", "id"],
+        ["css=#myCanvas", "css:finder"],
+        ["xpath=//canvas[@id='myCanvas']", "xpath:attributes"],
+        ["xpath=//div[@id='panzoom-parent']/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "80c567a8-3ed8-4ac4-8f89-9d36ddc174a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNext",
+      "targets": [
+        ["id=btnNext", "id"],
+        ["css=#btnNext", "css:finder"],
+        ["xpath=//a[contains(text(),'Продължи')]", "xpath:link"],
+        ["xpath=//a[@id='btnNext']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[8]/div/div[5]/a", "xpath:idRelative"],
+        ["xpath=//div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6851a1c8-8c15-4a61-9c78-8b01ca2924bb",
+      "comment": "",
+      "command": "click",
+      "target": "id=tbCouponCode",
+      "targets": [
+        ["id=tbCouponCode", "id"],
+        ["name=ctl00$CPH1$OrderFormControl1$tbCouponCode", "name"],
+        ["css=#tbCouponCode", "css:finder"],
+        ["xpath=//input[@id='tbCouponCode']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[7]/div[2]/div/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7077f553-6af9-4fa2-b023-c1ce8f7e7d67",
+      "comment": "",
+      "command": "type",
+      "target": "id=tbCouponCode",
+      "targets": [
+        ["id=tbCouponCode", "id"],
+        ["name=ctl00$CPH1$OrderFormControl1$tbCouponCode", "name"],
+        ["css=#tbCouponCode", "css:finder"],
+        ["xpath=//input[@id='tbCouponCode']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[7]/div[2]/div/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/div[2]/input", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "4d84b948-4851-4df2-a259-f3d91fec63fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=lnkAddCoupon",
+      "targets": [
+        ["id=lnkAddCoupon", "id"],
+        ["css=#lnkAddCoupon", "css:finder"],
+        ["xpath=//a[contains(text(),'Добавете  код')]", "xpath:link"],
+        ["xpath=//a[@id='lnkAddCoupon']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[7]/div[2]/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(\"ctl00$CPH1$OrderFormControl1$lnkAddCoupon\", \"\", true, \"Coupon\", \"\", false, true))')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f634045-a4ba-492e-8224-e8884462b966",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.msg-title > div",
+      "targets": [],
+      "value": "Voucher"
+    }, {
+      "id": "8631ac10-be54-4011-b2f9-6720bec085c6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var t = ${Voucher}; return t.includes('Възникна грешка с използвания ваучер!');",
+      "targets": [],
+      "value": "Word"
+    }, {
+      "id": "ad6d2283-1713-49b6-9bdf-a0610c8febd9",
+      "comment": "",
+      "command": "if",
+      "target": "${Word} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bbee26b-5dab-4ecc-b5b1-27728db2fbd4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Invalid Voucher\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "90e32db4-89c4-4df5-9d8b-bd4c14a1e786",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5583d4d5-297d-466c-b30a-5d49df66b112",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Valid Voucher\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "679762d4-1b22-42cf-b9d9-b3310196366e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd649adb-6967-4a5b-8c01-6c34a6673efb",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "Invalid Voucher"
+    }]
+  }, {
+    "id": "71f56883-532e-44ba-b3c1-46b0305949d9",
+    "name": "BookReservationIsSuccessfully",
+    "commands": [{
+      "id": "924ce278-edf8-495e-9592-b43031ed5044",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a4f442f-f7b6-4a82-8c9f-78464b843bff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.d",
+      "targets": [
+        ["css=.d", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff78e32c-9a1f-41ea-b225-aac9a41fd2bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.datepicker-days .next",
+      "targets": [
+        ["css=.datepicker-days .next", "css:finder"],
+        ["xpath=//th[3]", "xpath:position"],
+        ["xpath=//th[contains(.,'»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "224c6ce7-a168-4f23-bd8a-67dcefa8f972",
+      "comment": "",
+      "command": "click",
+      "target": "css=.day > button",
+      "targets": [
+        ["css=.day > button", "css:finder"],
+        ["xpath=//td[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0dec000-1b78-4f32-9be0-26041c1b9239",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=21:30",
+      "targets": [
+        ["linkText=21:30", "linkText"],
+        ["css=.row:nth-child(2) .btn:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'21:30')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[12]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'21:30')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "61afbff1-5d13-452b-8c21-f23407ed56fd",
+      "comment": "",
+      "command": "click",
+      "target": "id=ddQunatity_4",
+      "targets": [
+        ["id=ddQunatity_4", "id"],
+        ["name=ctl00$CPH1$SelectTicketControl$TicketsSelection$ctl06$ddQunatity", "name"],
+        ["css=#ddQunatity_4", "css:finder"],
+        ["xpath=//select[@id='ddQunatity_4']", "xpath:attributes"],
+        ["xpath=//table[@id='TicketsSelection']/tbody/tr[6]/td[4]/select", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[4]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa1989fc-8611-4a1e-9631-b712f4f1f9d9",
+      "comment": "",
+      "command": "select",
+      "target": "id=ddQunatity_4",
+      "targets": [],
+      "value": "label=1"
+    }, {
+      "id": "1edf0977-bf86-405f-8e83-ae84f4d38d02",
+      "comment": "",
+      "command": "click",
+      "target": "id=lbSelectSeats",
+      "targets": [
+        ["id=lbSelectSeats", "id"],
+        ["css=#lbSelectSeats", "css:finder"],
+        ["xpath=//a[contains(text(),'Избор на места')]", "xpath:link"],
+        ["xpath=//a[@id='lbSelectSeats']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[8]/div/div[4]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(\"ctl00$CPH1$lbSelectSeats\", \"\", true, \"\", \"\", false, true))')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0dc7cb77-edd8-4103-bc93-72f90b92eb9c",
+      "comment": "",
+      "command": "click",
+      "target": "id=myCanvas",
+      "targets": [
+        ["id=myCanvas", "id"],
+        ["css=#myCanvas", "css:finder"],
+        ["xpath=//canvas[@id='myCanvas']", "xpath:attributes"],
+        ["xpath=//div[@id='panzoom-parent']/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "585e07b2-5174-4a8f-879d-e1e013d7d992",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNext",
+      "targets": [
+        ["id=btnNext", "id"],
+        ["css=#btnNext", "css:finder"],
+        ["xpath=//a[contains(text(),'Продължи')]", "xpath:link"],
+        ["xpath=//a[@id='btnNext']", "xpath:attributes"],
+        ["xpath=//div[@id='pagecontainer']/div/div[8]/div/div[5]/a", "xpath:idRelative"],
+        ["xpath=//div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2adf063-e68b-4772-a452-146390c63ad1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c28f56ec-2183-445a-a252-e8e1480b5561",
+      "comment": "",
+      "command": "store",
+      "target": "четвъртък 01/02/2024",
+      "targets": [],
+      "value": "Date"
+    }, {
+      "id": "b2904f64-b4fe-472f-9ff4-b6ab94ece204",
+      "comment": "",
+      "command": "store",
+      "target": "21:30",
+      "targets": [],
+      "value": "Hour"
+    }, {
+      "id": "73efc5a5-d935-469f-972d-636f472f36c2",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.eventDateTime",
+      "targets": [
+        ["css=.eventDateTime", "css:finder"],
+        ["xpath=//div[@id='pagecontainer']/div/div[7]/div[2]/div/div/h3/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'четвъртък 04/01/2024 22:40')]", "xpath:innerText"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "5e82b561-74f8-4cae-8217-3eb0532a8fee",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var t = ${Test}; return t.toLowerCase().includes(\"четвъртък 01/02/2024\");",
+      "targets": [],
+      "value": "TestDate"
+    }, {
+      "id": "a0e5512b-1720-409b-b1e5-b998fb376f9d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var t = ${Test}; return t.toLowerCase().includes(\"21:30\");",
+      "targets": [],
+      "value": "TestHour"
+    }, {
+      "id": "99bc1736-c8e8-4d1f-bdc9-cfecd479b287",
+      "comment": "",
+      "command": "if",
+      "target": "${TestDate} === true && ${TestHour} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9e23412-0d71-44c3-b831-69c6898fc4b5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Valid reservation\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "c37772e7-0ee5-44a9-a4e2-272552864a0a",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d47eb577-a403-4ccf-8d07-258a89ef3f3a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Invalid reservation\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "08cda93c-8ab6-496e-9bfc-5d3239f9862e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3671aa96-9fed-4b38-a769-a4afdfba1eaf",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "Valid reservation"
+    }]
+  }, {
+    "id": "9153450a-0d94-4d92-a3f8-79774bc14fee",
+    "name": "OverviewWebsiteLinks2",
+    "commands": [{
+      "id": "4ec3ab6d-9428-48ce-acc5-6106ebf7efe0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77ae739d-8ebf-4130-af02-e87883b29b41",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21488f31-5e8a-4955-9080-9404b0fbad1e",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "linkText=Instagram@href",
+      "targets": [],
+      "value": "link"
+    }, {
+      "id": "2a2f799c-ebf1-4f41-8d69-ee5a0e142353",
+      "comment": "",
+      "command": "assert",
+      "target": "link",
+      "targets": [],
+      "value": "https://www.instagram.com/cinemacitybg/"
+    }, {
+      "id": "cc8f4ffd-3e6b-454c-b711-060fad0f6b36",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Instagram",
+      "targets": [
+        ["linkText=Instagram", "linkText"],
+        ["css=.col-xs-6:nth-child(4) > .footer-group-item:nth-child(3) > .posMessageItemLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Instagram')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.instagram.com/cinemacitybg/')]", "xpath:href"],
+        ["xpath=//div[4]/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Instagram')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "904863eb-9dc7-42c4-aa80-9a1f6cb9a69b",
+    "name": "SearchMovie",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cb2bff67-e234-48f7-825e-5d03933a80a6", "65fc7292-9412-4ec9-a225-a79230e0ab8b", "146bb52c-648b-4642-bc5a-49b8d5656dca", "94b96bb5-c0d5-4ea9-937a-6f9190883bfd"]
+  }, {
+    "id": "03cee62b-10bc-41e5-af28-642c2f491992",
+    "name": "FilterProgram",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7758692b-3455-453c-b49f-11edc05526fc", "7c3ada00-1f67-428c-a63a-b5d92de9b79e", "f7793c61-e277-4550-b5e8-2a70bc496831", "2bcfa187-4b76-41a2-9dd3-a62384f9a092", "c733a95c-3236-434a-a958-b165d7349155", "1d6d1334-bb32-4a2c-9d87-4144e6813233", "2964b74e-db17-4fa4-9d6f-346cd99c602f"]
+  }, {
+    "id": "193eafdd-b7e6-490c-84fb-d2c90902b63b",
+    "name": "SearchCinema",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b28f8f7d-1069-4652-af8f-ad9b830ef50f", "8485bb87-9de6-462d-ba32-f70c6d185fc3"]
+  }, {
+    "id": "c44f1bdb-ab4a-466e-87d6-89cbc8bb45f4",
+    "name": "OverviewMovie",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9d0a307c-6b26-4932-9a0f-f63a0e0c2171", "f0a71e11-9190-4cc0-bcad-5d4ae4185d16"]
+  }, {
+    "id": "2f3374d8-4bec-40b8-8bd2-7e32000249c4",
+    "name": "OverviewWebsite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5c9b7294-19d8-4080-81ae-940cfee97fd4", "998f8724-4dc3-4af9-a4a4-3643189eda75", "e3d7a41f-a561-4c4d-8a55-af2487a98b08", "9153450a-0d94-4d92-a3f8-79774bc14fee"]
+  }, {
+    "id": "4e39e3ae-8322-4551-a286-99144c004849",
+    "name": "BookReservation",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f8df0254-d26f-44d7-b54a-b6bf26a619da", "b49ea88e-5d78-4c2c-8294-573de589193e", "99ad1ee9-f8eb-450c-aff6-1a695a9388ee", "71f56883-532e-44ba-b3c1-46b0305949d9"]
+  }],
+  "urls": ["https://www.cinemacity.bg/"],
+  "plugins": []
+}
